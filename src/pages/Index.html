@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <link rel="stylesheet" href="/src/styles/chatbot.css" />
+    <link rel="icon" href="/imagens/coracao.png" type="image/png" />
+    <title>Ampliando a Consciência</title>
+  </head>
+  <body>
+    <header>
+      <nav class="section__container nav__container">
+        <div class="nav__logo">Ampliando a <span>Consciência</span></div>
+        <ul class="nav__links">
+          <li class="link"><a href="#home">Início</a></li>
+          <li class="link"><a href="#about">Sobre Nós</a></li>
+          <li class="link"><a href="/src/pages/quiz.html">Quiz</a></li>
+          <li class="link"><a href="/src/pages/blog.html">Blog</a></li>
+          <li class="link"><a href="/src/pages/Depoimento.html">Depoimentos</a></li>
+        </ul>
+        <div id="user-section"></div>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <div class="header__content">
+          <h1>Conscientização é proteção: entenda as ISTs e cuide de você.</h1>
+          <p>
+            Bem-vindo ao nosso espaço dedicado à saúde sexual. Priorizamos seu
+            bem-estar com um atendimento cuidadoso e informações atualizadas
+            sobre ISTs. Estamos aqui para oferecer suporte e orientação,
+            garantindo que você se sinta seguro e informado. Cuide da sua saúde
+            sexual conosco e faça a diferença na sua vida.
+          </p>
+          <button class="btn" onclick="location.href='#service'">
+            Confira!
+          </button>
+        </div>
+        <div class="header__form">
+          <form id="newsletterForm">
+            <h4>Receba Noticias!</h4>
+            <input type="text" id="nomeID" placeholder="Nome" />
+            <input type="text" id="sobrenomeID" placeholder="Sobrenome" />
+            <input type="text" id="emailID" placeholder="E-mail" />
+            <button class="btn form__btn" type="submit">Inscreva-se</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container service__container" id="service">
+      <div class="service__header">
+        <div class="service__header__content">
+          <h2 class="section__header">Nossos Serviços</h2>
+          <p>
+            Explore nossos serviços voltados para sua saúde sexual! Oferecemos
+            ferramentas como testes rápidos e discretos para detectar possíveis
+            ISTs, além de informações valiosas para ajudar você a entender
+            melhor cada condição. Nosso compromisso é fornecer suporte claro e
+            acessível para que você possa cuidar de sua saúde com confiança e
+            responsabilidade.
+          </p>
+        </div>
+      </div>
+      <div class="service__grid">
+        <div class="service__card">
+          <span><i class="ri-book-line"></i></span>
+          <h4>Fique Informado!</h4>
+          <p>
+            Mantenha-se bem informado! Oferecemos uma área de estudos dedicada,
+            onde você pode se conscientizar sobre diversos temas de saúde.
+            Explore nossos recursos e aprenda mais sobre prevenção, diagnóstico
+            e tratamentos para cuidar melhor de sua saúde.
+          </p>
+          <button class="btn" onclick="location.href='blog.html'">
+            Saiba Mais
+          </button>
+        </div>
+        <div class="service__card" id="healthTestCard">
+          <span><i class="ri-mental-health-line"></i></span>
+          <h4>Faça o Teste de ISTs!</h4>
+          <p>
+            Preocupado com sua saúde sexual? Realize nosso teste de ISTs e fique
+            mais tranquilo. Este formulário rápido e discreto ajuda você a
+            identificar possíveis riscos e tomar as medidas necessárias. A
+            prevenção é a chave para uma vida saudável e segura. Faça o teste
+            agora e cuide de sua saúde com responsabilidade!
+          </p>
+          <button class="btn" onclick="location.href='Formulario.html'">
+            Faça o Teste
+          </button>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-hospital-line"></i></span>
+          <h4>Participe do nosso quiz!</h4>
+          <p>
+            Teste seus conhecimentos sobre ISTs! Participe do nosso quiz para
+            aprender mais sobre prevenção, sintomas e tratamento de infecções
+            sexualmente transmissíveis. Clique em "Começar" e veja o quanto você
+            sabe!
+          </p>
+          <button class="btn" onclick="location.href='quiz.html'">
+            Começar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__content">
+        <h2 class="section__header">Sobre Nós</h2>
+        <p>
+          Seja bem-vindo ao projeto "Ampliando a Consciência". Este projeto é
+          dedicado a aumentar o conhecimento sobre infecções sexualmente
+          transmissíveis (ISTs). Nosso objetivo é fornecer informações claras
+          sobre a prevenção, diagnóstico e tratamento dessas infecções, com o
+          intuito de reduzir sua incidência e impacto na saúde pública.
+        </p>
+        <p>
+          Estamos focados em promover a educação sexual e facilitar o acesso a
+          serviços de saúde. Acreditamos que, ao ampliar a conscientização,
+          podemos melhorar a saúde e o bem-estar de todos. Cada passo em direção
+          a um melhor entendimento e prevenção das ISTs é um avanço para nossa
+          comunidade.
+        </p>
+        <p>
+          Vamos juntos fazer a diferença, criando um ambiente mais informado e
+          seguro para todos.
+        </p>
+      </div>
+      <div class="about__image">
+        <img src="/imagens/about.jpg" alt="about" />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Ampliando a <span>Consciência🩺</span></h3>
+          <p>
+            É uma grande honra para nós acompanhar você em sua jornada de saúde.
+            Estamos comprometidos em oferecer um atendimento gentil e
+            personalizado, garantindo que cada etapa do seu tratamento seja
+            marcada pela excelência e pelo cuidado.
+          </p>
+          <p>
+            Confie em nossa equipe para cuidar de você e de seus entes queridos.
+            Juntos, trabalharemos para alcançar os melhores resultados
+            possíveis, sempre com o objetivo de proporcionar o máximo bem-estar
+            e qualidade de vida.
+          </p>
+        </div>
+        <div class="footer__col">
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre Nós</a></li>
+            <li><a href="/src/pages/quiz.html">Quiz</a></li>
+            <li><a href="/src/pages/blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contato</h4>
+          <p><i class="ri-map-pin-2-fill"></i> Senac, São Leopoldo.</p>
+          <p><i class="ri-mail-fill"></i> support@care.com</p>
+          <p><i class="ri-phone-fill"></i> (51) 4002 -8922</p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <div class="footer__bar__content">
+          <p>© Valorize seu corpo como o templo da sua alma.</p>
+          <div class="footer__socials">
+            <span><i class="ri-instagram-line"></i></span>
+            <span><i class="ri-facebook-fill"></i></span>
+            <span><i class="ri-heart-fill"></i></span>
+            <span><i class="ri-twitter-fill"></i></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="chatbot-toggle" onclick="toggleChatbot()">
+      <div class="chatbot-icon">💬</div>
+    </div>
+    <div id="chatbot">
+      <div id="chatbot-header">
+        <h2>BotConsciente</h2>
+        <button onclick="toggleChatbot()">❌</button>
+      </div>
+      <div id="chatbot-body"></div>
+    </div>
+
+    <script src="/src/js/chatbot.js"></script>
+    <script src="/src/js/scriptNEWS.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const logado = localStorage.getItem("logado") === "true"
+        const userSection = document.getElementById("user-section")
+    
+        if (logado) {
+          const usuario = JSON.parse(localStorage.getItem("usuario"))
+          const nome = usuario.nome;
+    
+          userSection.innerHTML = `
+            <p>Bem-vindo, ${nome}!</p>
+            <button class="btn" onclick="window.location.href = 'perfil.html'">Seu perfil</button>`
+        } else {
+          userSection.innerHTML = `
+            <button class="btn" onclick="location.href='login.html'">Login</button>`
+        }
+      });
+    </script>
+  </body>
+</html>

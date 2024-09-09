@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de ISTs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/imagens/coracao.png" type="image/png" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header.site-header {
+            background-color: #008000;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header.site-header h1 {
+            margin: 0;
+            font-weight: 600;
+        }
+        header.site-header p {
+            margin: 0;
+            font-weight: 300;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .form-container h1 {
+            color: #004d40;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #008000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .result, .error {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .error {
+            color: #d32f2f;
+        }
+        footer {
+            background-color: #008000;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        footer p {
+            font-size: 1em;
+            margin: 0;
+            font-weight: 300; /* Estilo leve */
+        }
+
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Teste de ISTs</h1>
+            <p>Preencha o formulário abaixo para obter uma avaliação preliminar.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <form id="stiForm">
+                <label>Você já teve algum dos seguintes sintomas? (Marque todas as que se aplicam)</label>
+                <input type="checkbox" id="sintomas1" name="sintomas" value="dor">
+                <label for="sintomas1">Dor ao urinar</label>
+                <input type="checkbox" id="sintomas2" name="sintomas" value="corrimento">
+                <label for="sintomas2">Corrimento anormal</label>
+                <input type="checkbox" id="sintomas3" name="sintomas" value="lesoes">
+                <label for="sintomas3">Lesões ou úlceras</label>
+                <input type="checkbox" id="sintomas4" name="sintomas" value="coceira">
+                <label for="sintomas4">Coceira ou irritação</label>
+                <input type="checkbox" id="sintomasNenhum" name="sintomas" value="nenhum">
+                <label for="sintomasNenhum">Nenhuma das opções</label>
+
+                <label>Você teve algum contato sexual desprotegido com um parceiro(a) desconhecido(a)?</label>
+                <input type="radio" id="contatoSim" name="contato" value="sim">
+                <label for="contatoSim">Sim</label>
+                <input type="radio" id="contatoNao" name="contato" value="nao">
+                <label for="contatoNao">Não</label>
+
+                <label>Você já teve algum diagnóstico de IST no passado?</label>
+                <input type="radio" id="diagnosticoSim" name="diagnostico" value="sim">
+                <label for="diagnosticoSim">Sim</label>
+                <input type="radio" id="diagnosticoNao" name="diagnostico" value="nao">
+                <label for="diagnosticoNao">Não</label>
+
+                <label>Você usa preservativos regularmente durante o sexo?</label>
+                <input type="radio" id="preservativosSim" name="preservativos" value="sim">
+                <label for="preservativosSim">Sim</label>
+                <input type="radio" id="preservativosNao" name="preservativos" value="nao">
+                <label for="preservativosNao">Não</label>
+
+                <button type="button" class="submit-btn" onclick="verificarIST()">Enviar</button>
+            </form>
+            <div id="resultado" class="result"></div>
+            <div id="error" class="error"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 - Teste de ISTs. Proteja-se, cuide de sua saúde!</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('sintomasNenhum').addEventListener('change', function() {
+            if (this.checked) {
+                // Desmarca todos os outros checkboxes
+                const sintomas = document.querySelectorAll('input[name="sintomas"]');
+                sintomas.forEach(function(sintoma) {
+                    if (sintoma !== document.getElementById('sintomasNenhum')) {
+                        sintoma.checked = false;
+                    }
+                });
+            }
+        });
+
+        const outrosSintomas = document.querySelectorAll('input[name="sintomas"]:not(#sintomasNenhum)');
+        outrosSintomas.forEach(function(sintoma) {
+            sintoma.addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('sintomasNenhum').checked = false;
+                }
+            });
+        });
+
+        function verificarIST() {
+            const sintomas = document.querySelectorAll('input[name="sintomas"]:checked');
+            const contato = document.querySelector('input[name="contato"]:checked');
+            const diagnostico = document.querySelector('input[name="diagnostico"]:checked');
+            const preservativos = document.querySelector('input[name="preservativos"]:checked');
+
+            if (sintomas.length === 0 || !contato || !diagnostico || !preservativos) {
+                document.getElementById('error').innerText = 'Por favor, responda todas as perguntas antes de enviar.';
+                document.getElementById('resultado').innerText = '';
+                return;
+            }
+
+            document.getElementById('error').innerText = '';
+            
+            let sintomaPresente = sintomas.length > 0 && !Array.from(sintomas).some(sym => sym.value === "nenhum");
+            let contatoDesprotegido = contato && contato.value === "sim";
+            let historicoDiagnostico = diagnostico && diagnostico.value === "sim";
+            let usaPreservativos = preservativos && preservativos.value === "sim";
+
+            let resultado = '';
+
+            if (sintomaPresente && contatoDesprotegido) {
+                resultado = 'Com base nas suas respostas, é possível que você tenha uma IST. Recomendamos que você procure um profissional de saúde para uma avaliação detalhada e exames específicos.';
+            } else if (sintomaPresente) {
+                resultado = 'Você apresenta sintomas que podem estar associados a uma IST. É aconselhável que você consulte um profissional de saúde para uma investigação mais aprofundada.';
+            } else if (contatoDesprotegido) {
+                resultado = 'Você teve contato sexual desprotegido com um parceiro(a) desconhecido(a), o que pode aumentar o risco de ISTs. Considere realizar exames e discutir com um profissional de saúde sobre medidas preventivas.';
+            } else if (historicoDiagnostico) {
+                resultado = 'Você tem um histórico de ISTs. É importante manter um acompanhamento regular com um profissional de saúde para garantir sua saúde contínua.';
+            } else if (!usaPreservativos) {
+                resultado = 'Você não usa preservativos regularmente. O uso de preservativos é uma das melhores formas de prevenir ISTs. Recomendamos que você comece a usar preservativos para reduzir o risco.';
+            } else {
+                resultado = 'Baseado nas suas respostas, não parece haver um risco imediato de IST. No entanto, se você tiver sintomas futuros ou preocupações, consulte um profissional de saúde para orientação e exames regulares.';
+            }
+
+            document.getElementById('resultado').innerText = resultado;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* Estilo geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #e6ffe6;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Cabeçalho */
+header {
+  background: #008000; /* Mudança de cor */
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Contêiner */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Introdução */
+.intro {
+  background: #f0fff0; /* Mudança de cor */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.intro h2 {
+  color: #006400; /* Mudança de cor */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Lista de ISTs */
+.ist-list {
+  padding: 50px 0;
+  background: #fff;
+}
+
+.ist-list .ist {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  background-color: #fff;
+  border-left: 5px solid #006400; /* Mudança de estilo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionado */
+}
+
+.ist-list .ist h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #008000; /* Mudança de cor */
+}
+
+.ist-list .ist p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Seção Pré-teste */
+.pre-test {
+  background-color: #e6f5e6; /* Novo estilo */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.pre-test h2 {
+  color: #006400; /* Mudança de cor */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.pre-test-btn {
+  background-color: #008000; /* Novo botão */
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.pre-test-btn:hover {
+  background-color: #006400;
+}
+
+/* Catálogo */
+.catalog {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #006400; /* Verde escuro */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Resultado da Análise */
+.alert-warning {
+  background-color: #fff3cd; /* Amarelo claro */
+  color: #856404; /* Amarelo escuro */
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #d4edda; /* Verde claro */
+  color: #155724; /* Verde escuro */
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #008000; /* Verde escuro */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #006400; /* Verde mais escuro */
+}
+
+/* Rodapé */
+footer { 
+  color: #000000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 1em;
+  margin: 0;
+  font-weight: 300; /* Estilo leve */
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/Lista.css">
+    <link rel="icon" href="/imagens/coracao.png" type="image/png">
+    <title>Lista de News</title>
+</head>
+<body>
+   <center><h1>FORMULÁRIO:</h1>
+    <form id="news-form">
+        
+        <label for="nome-lista"> NOME: </label>
+        <input type="text" id="nome-lista" required>
+
+        <label for="email-lista"> EMAIL: </label>
+        <input type="text" id="email-lista" required>
+
+        <label for="sobrenome-lista"> sobrenome: </label>
+        <input type="text" id="sobrenome-lista" required>
+
+   
+    </form>
+    <h1> LISTA DE USERS: </h1>
+    <ul id="news-list" > </ul>
+    <div class="botao">
+    </div>
+    <script src="/src/js/scriptNEWS.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          listNews();
+        });
+      </script>
+      </center>
+</body>
+</html>

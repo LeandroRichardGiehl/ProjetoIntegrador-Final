@@ -1,0 +1,283 @@
+/* Estilo global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8; /* Fundo mais claro */
+  color: #333; /* Texto principal */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: transparent;
+  margin-bottom: 30px; /* Adiciona espaço abaixo do cabeçalho */
+}
+
+header button {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  padding: 10px 25px;
+  background: #2a8c4a;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+header button:hover {
+  transform: translateY(-2px);
+  background-color: #19692e;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #34495e; /* Título com tom escuro */
+  text-align: center;
+}
+
+.testimonial-form {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; /* Fundo de formulário */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralizar o conteúdo */
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #2a8c4a; /* Verde suave ao focar */
+  outline: none;
+}
+
+.btnEnviar {
+  width: auto; /* Ajuste automático da largura */
+  padding: 15px 25px; /* Ajuste do padding */
+  margin-top: 15px;
+  background-color: #2a8c4a; /* Verde principal */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnEnviar:hover {
+  background-color: #19692e; /* Tom mais escuro ao passar o mouse */
+}
+
+.testimonial-header {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #2a8c4a; /* Cor de fundo do cabeçalho */
+  color: #ffffff; /* Cor do texto */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Espaçamento abaixo do cabeçalho */
+}
+
+.testimonial-header h1 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.testimonial-list {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; /* Fundo da lista */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.testimonial-item {
+  background-color: #2a8c4a; /* Fundo dos depoimentos */
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 180px; /* Aumenta a altura mínima para acomodar os novos elementos */
+}
+
+.testimonial-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+}
+
+.testimonial-item .profile-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonial-item .profile-name::after {
+  content: " (fictício)";
+  font-size: 0.8em;
+  color: #bdc3c7; /* Cinza claro */
+}
+
+.testimonial-item .text {
+  flex: 1;
+  line-height: 1.4;
+  text-align: justify;
+  word-wrap: break-word;
+  margin-bottom: 10px; /* Espaçamento abaixo do texto do depoimento */
+}
+
+.testimonial-item .likes-comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; /* Espaçamento acima dos botões de curtida e comentários */
+}
+
+.testimonial-item .likes-comments .likes {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.testimonial-item .likes-comments .likes button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.testimonial-item .likes-comments .likes span {
+  margin-left: 5px;
+}
+
+.testimonial-item .likes-comments .comments {
+  font-size: 0.9em;
+}
+
+#showMoreButton {
+  background-color: #2a8c4a; /* Verde para o botão de "Mostrar mais" */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#showMoreButton:hover {
+  background-color: #19692e; /* Tom mais escuro ao passar o mouse */
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.9em;
+  color: #555555; /* Cinza suave no rodapé */
+}
+
+@media (max-width: 768px) {
+  .testimonial-form, .testimonial-list {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  textarea, button {
+    font-size: 0.9em;
+  }
+
+  button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .testimonial-form, .testimonial-list {
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  z-index: 1000;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.notification.success {
+  background-color: #28a745; /* Verde para sucesso */
+}
+
+.notification.error {
+  background-color: #dc3545; /* Vermelho para erro */
+}
+
+.notification.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}

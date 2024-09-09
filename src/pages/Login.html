@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/src/styles/Login.css">
+    <link rel="icon" href="/imagens/coracao.png" type="image/png">
+    
+
+    <title>LOGIN</title>
+</head>
+
+<body>
+
+    <header> <button id="voltar-index">Voltar ao Início</button>    </header>
+
+    <div class="container" id="container">
+        <div class="form-container cadastro">
+            <form id="user-form">
+                <h1>Crie sua Conta!</h1>
+               
+                <span>Use seu email para o cadastro!</span>
+                <input type="text" id="nome-cadastro" placeholder="Nome">
+                <input type="email" id="email-cadastro" placeholder="Email">
+                <input type="password" id="senha-cadastro" placeholder="Senha">
+                <button type="submit">Cadastre-se</button>
+            </form>
+        </div>
+        <div class="form-container login">
+            <form id = "form-login">
+                <h1>Login</h1>
+                
+                <span>Use seu CRM e Senha!</span>
+                <input type="email" id="email" placeholder="Email">
+                <input type="password"id= "senha" placeholder="senha">
+                <a href="#">Esqueceu sua senha?</a>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-painel toggle-esquerda">
+                    <h1>Bem vindo Novamente!</h1>
+                    <p>Insira seus dados pessoais para usar todos os recursos do site!</p>
+                    <button class="hidden" id="login">Login</button>
+                </div>  
+                <div class="toggle-painel toggle-direita">
+                    <h1>Ola!</h1>
+                    <p>Registre-se com seus dados pessoais para usar todos os recursos do site</p>
+                    <button class="hidden" id="cadastro">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/js/cadastro.js"></script>
+    <script src="/src/js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Perfil</title>
+  <link rel="stylesheet" href="/src/styles/perfil.css" />
+  <link rel="icon" href="/imagens/coracao.png" type="image/png" />
+</head>
+<body>
+  <button id="voltar-home">Voltar ao Início</button>
+
+  <div id="containerPerfil">
+    <div id="containerFotoPerfil">
+      <img id="fotoPerfil" src="caminho_default_da_foto.png" alt="Foto de Perfil" />
+      <h2 id="nomeUsuario">Nome do Usuário</h2>
+      <p id="emailUsuario">email@exemplo.com</p>
+      <p id="descricaoUsuario">Descrição do usuário</p>
+    </div>
+
+    <div class="acoes">
+      <button id="alterarDados">Alterar Dados</button>
+      <button id="excluirConta">Excluir Conta</button>
+      <button id="logout">
+        <img src="/imagens/saida-de-emergencia.png" alt="Logout" />
+      </button>
+    </div>
+  </div>
+
+  <div id="alterarModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">Alterar Dados</div>
+      <form id="alterarForm">
+        <div class="input-group">
+          <label for="nomeModal">Nome</label>
+          <input type="text" id="nomeModal" name="nomeModal" required />
+        </div>
+
+        <div class="input-group">
+          <label for="emailModal">Email</label>
+          <input type="email" id="emailModal" name="emailModal" required />
+        </div>
+
+        <div class="input-group">
+          <label for="senhaModal">Senha</label>
+          <input type="password" id="senhaModal" name="senhaModal" required />
+        </div>
+
+        <div class="input-group">
+          <label for="descricaoModal">Descrição</label>
+          <textarea id="descricaoModal" name="descricaoModal" rows="3" placeholder="Escreva algo sobre você..."></textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <input type="file" id="fotoPerfilInput" accept="image/*" style="display: none;" />
+
+  <script src="/src/js/perfilScript.js"></script>
+</body>
+</html>
