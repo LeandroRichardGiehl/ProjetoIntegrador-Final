@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Depoimentos</title>
-  <link rel="stylesheet" href="/src/styles/StylesDepoimento.css">
-  <link rel="icon" href="/imagens/coracao.png" type="image/png" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depoimentos</title>
+    <link rel="stylesheet" href="/src/styles/StylesDepoimento.css" />
+    <link rel="icon" href="/imagens/coracao.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <button id="voltar-index">Voltar ao Início</button>
+    </header>
 
-  <header> 
-    <button id="voltar-index">Voltar ao Início</button> 
-  </header>
+    <header class="testimonial-header">
+      <h1>Depoimentos</h1>
+    </header>
 
-  <header class="testimonial-header">
-    <h1>Depoimentos</h1>
-  </header>
-
-  <section class="testimonial-list" id="testimonialList">
-    <!-- Depoimentos serão carregados dinamicamente aqui -->
-    <!-- Exemplo de depoimento -->
-    <div class="testimonial-item">
-      <img src="url_da_foto_do_usuario" alt="Foto do Usuário">
-      <div class="profile-name">Nome do Usuário</div>
-      <div class="text">Texto do depoimento...</div>
-      <div class="likes-comments">
-        <div class="likes">
-          <button onclick="toggleLike(this)">❤️</button>
-          <span id="like-count">10</span> <!-- Número de curtidas -->
-        </div>
-        <div class="comments">
-          <span>Comentários (3)</span> <!-- Número de comentários -->
+    <section class="testimonial-list" id="testimonialList">
+      <div class="testimonial-item">
+        <img src="url_da_foto_do_usuario" alt="Foto do Usuário" />
+        <div class="profile-name">Nome do Usuário</div>
+        <div class="text">Texto do depoimento...</div>
+        <div class="likes-comments">
+          <div class="likes">
+            <button onclick="toggleLike(this)">❤️</button>
+            <!--Tentativa de adicionar curtidas no depoimento-->
+            <span id="like-count">10</span>
+          </div>
+          <div class="comments">
+            <span>Comentários (3)</span>
+            <!--Tentativa de add comentarios nos depoimentos-->
+          </div>
         </div>
       </div>
+    </section>
+
+    <div id="showMoreContainer">
+      <button id="showMoreButton">Mostrar Mais</button>
     </div>
-    <!-- Adicione mais depoimentos conforme necessário -->
-  </section>
 
-  <div id="showMoreContainer">
-    <button id="showMoreButton">Mostrar Mais</button>
-  </div>
+    <section class="testimonial-form">
+      <h2>Envie seu depoimento</h2>
+      <p>(É necessário estar logado)</p>
+      <br />
+      <textarea
+        id="testimonialInput"
+        rows="4"
+        placeholder="Escreva seu depoimento aqui..."
+      ></textarea>
+      <button id="btnEnviar" class="btnEnviar" onclick="submitTestimonial()">
+        Enviar Depoimento
+      </button>
+    </section>
 
-  <section class="testimonial-form">
-    <h2>Envie seu depoimento</h2>
-    <p>(É necessário estar logado)</p>
-    <br />
-    <textarea id="testimonialInput" rows="4" placeholder="Escreva seu depoimento aqui..."></textarea>
-    <button id="btnEnviar" class="btnEnviar" onclick="submitTestimonial()">Enviar Depoimento</button>
-  </section>
+    <footer>
+      <p>© 2024 Ampliando a Consciência.</p>
+    </footer>
 
-  <footer>
-    <p>© 2024 Ampliando a Consciência.</p>
-  </footer>
-
-  <script src="/src/js/ScriptDepoimento.js"></script>
-  <script>
-    function toggleLike(button) {
-      // Lógica para adicionar/remover curtidas
-      const likeCountSpan = button.nextElementSibling;
-      let likeCount = parseInt(likeCountSpan.textContent, 10);
-      if (button.classList.toggle('liked')) {
-        likeCount++;
-      } else {
-        likeCount--;
+    <script src="/src/js/ScriptDepoimento.js"></script>
+    <script>
+      function toggleLike(button) {
+        const likeCountSpan = button.nextElementSibling;
+        let likeCount = parseInt(likeCountSpan.textContent, 10);
+        if (button.classList.toggle("liked")) {
+          likeCount++;
+        } else {
+          likeCount--;
+        }
+        likeCountSpan.textContent = likeCount;
       }
-      likeCountSpan.textContent = likeCount;
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>

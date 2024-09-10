@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo de Perguntas sobre ISTs</title>
-  <link rel="stylesheet" href="/src/styles/quiz.css">
-  <link rel="icon" href="/imagens/coracao.png" type="image/png" />
-</head>
-<body>
-  
-  <button id="voltar-home">Voltar ao Início</button>
-  
-  <div class="container">
-    <header>
-      <h1>Jogo de Perguntas sobre ISTs</h1>
-      <h2> 🚀 Desafie-se! Responda às perguntas e descubra o quanto você sabe sobre ISTs. A cada resposta correta, você ganha pontos e avança para a próxima pergunta.
-        Se errar, não se preocupe – é tudo parte do aprendizado!</h2>
-    </header>
-    <main>
-      
-      <div id="question-container">
-        <p id="question">Pergunta será exibida aqui</p>
-        <div id="answer-buttons">
-          <!-- Botões serão inseridos pelo JavaScript -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Perguntas sobre ISTs</title>
+    <link rel="stylesheet" href="/src/styles/quiz.css" />
+    <link rel="icon" href="/imagens/coracao.png" type="image/png" />
+  </head>
+  <body>
+    <button id="voltar-home">Voltar ao Início</button>
+
+    <div class="container">
+      <header>
+        <h1>Jogo de Perguntas sobre ISTs</h1>
+        <h2>
+          🚀 Desafie-se! Responda às perguntas e descubra o quanto você sabe
+          sobre ISTs. A cada resposta correta, você ganha pontos e avança para a
+          próxima pergunta. Se errar, não se preocupe – é tudo parte do
+          aprendizado!
+        </h2>
+      </header>
+      <main>
+        <div id="question-container">
+          <p id="question">Pergunta será exibida aqui</p>
+          <div id="answer-buttons"></div>
         </div>
-      </div>
-      <button id="next-button" class="hide">Próxima Pergunta</button>
-      <p id="score">Pontuação: 0</p>
-      <button id="info-button">Saiba Mais sobre ISTs</button>
-      <button id="restart-button" class="hide">Reiniciar Quiz</button>
-      <div id="info-container" class="hide">
-        <h2>Informações sobre ISTs</h2>
-        <p>As Infecções Sexualmente Transmissíveis (ISTs) são infecções que são transmitidas de uma pessoa para outra através do contato sexual. Algumas ISTs são causadas por vírus, bactérias ou parasitas.</p>
-        <h3>Tipos Comuns de ISTs</h3>
-        <ul>
-          <li><strong>Clamídia:</strong> Causada por bactérias, pode ser tratada com antibióticos.</li>
-          <li><strong>Gonorreia:</strong> Também causada por bactérias, é tratada com antibióticos.</li>
-          <li><strong>Herpes:</strong> Causada por vírus, não tem cura, mas os sintomas podem ser gerenciados.</li>
-          <li><strong>Sífilis:</strong> Causada por bactérias, tratável com antibióticos, especialmente em estágios iniciais.</li>
-        </ul>
-        <h3>Prevenção</h3>
-        <p>Use preservativos durante o sexo, faça exames regulares e mantenha uma comunicação aberta com seu parceiro.</p>
-      </div>
-    </main>
-    <footer>
-      <p>&copy; 2024 Ampliando a Consciência.</p>
-    </footer>
-  </div>
-  <script src="/src/js/quiz.js"></script>
-</body>
+        <button id="next-button" class="hide">Próxima Pergunta</button>
+        <p id="score">Pontuação: 0</p>
+        <button id="info-button">Saiba Mais sobre ISTs</button>
+        <button id="restart-button" class="hide">Reiniciar Quiz</button>
+        <div id="info-container" class="hide">
+          <h2>Informações sobre ISTs</h2>
+          <p>
+            As Infecções Sexualmente Transmissíveis (ISTs) são infecções que são
+            transmitidas de uma pessoa para outra através do contato sexual.
+            Algumas ISTs são causadas por vírus, bactérias ou parasitas.
+          </p>
+          <h3>Tipos Comuns de ISTs</h3>
+          <ul>
+            <li>
+              <strong>Clamídia:</strong> Causada por bactérias, pode ser tratada
+              com antibióticos.
+            </li>
+            <li>
+              <strong>Gonorreia:</strong> Também causada por bactérias, é
+              tratada com antibióticos.
+            </li>
+            <li>
+              <strong>Herpes:</strong> Causada por vírus, não tem cura, mas os
+              sintomas podem ser gerenciados.
+            </li>
+            <li>
+              <strong>Sífilis:</strong> Causada por bactérias, tratável com
+              antibióticos, especialmente em estágios iniciais.
+            </li>
+          </ul>
+          <h3>Prevenção</h3>
+          <p>
+            Use preservativos durante o sexo, faça exames regulares e mantenha
+            uma comunicação aberta com seu parceiro.
+          </p>
+        </div>
+      </main>
+      <footer>
+        <p>&copy; 2024 Ampliando a Consciência.</p>
+      </footer>
+    </div>
+    <script src="/src/js/quiz.js"></script>
+  </body>
 </html>

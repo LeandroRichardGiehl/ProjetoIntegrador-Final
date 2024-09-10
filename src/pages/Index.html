@@ -21,7 +21,9 @@
           <li class="link"><a href="#about">Sobre Nós</a></li>
           <li class="link"><a href="/src/pages/quiz.html">Quiz</a></li>
           <li class="link"><a href="/src/pages/blog.html">Blog</a></li>
-          <li class="link"><a href="/src/pages/Depoimento.html">Depoimentos</a></li>
+          <li class="link">
+            <a href="/src/pages/Depoimento.html">Depoimentos</a>
+          </li>
         </ul>
         <div id="user-section"></div>
       </nav>
@@ -196,19 +198,19 @@
     <script src="/src/js/scriptNEWS.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const logado = localStorage.getItem("logado") === "true"
-        const userSection = document.getElementById("user-section")
-    
+        const logado = localStorage.getItem("logado") === "true";
+        const userSection = document.getElementById("user-section");
+
         if (logado) {
-          const usuario = JSON.parse(localStorage.getItem("usuario"))
+          const usuario = JSON.parse(localStorage.getItem("usuario"));
           const nome = usuario.nome;
-    
+
           userSection.innerHTML = `
             <p>Bem-vindo, ${nome}!</p>
-            <button class="btn" onclick="window.location.href = 'perfil.html'">Seu perfil</button>`
+            <button class="btn" onclick="window.location.href = 'perfil.html'">Seu perfil</button>`;
         } else {
           userSection.innerHTML = `
-            <button class="btn" onclick="location.href='login.html'">Login</button>`
+            <button class="btn" onclick="location.href='login.html'">Login</button>`;
         }
       });
     </script>

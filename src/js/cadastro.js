@@ -1,7 +1,6 @@
-// cliente banco de dados
 const userForm = document.getElementById("user-form");
-const userList = document.getElementById("user-list"); 
-const listForm = document.getElementById("list-form")
+const userList = document.getElementById("user-list");
+const listForm = document.getElementById("list-form");
 
 function listUsers() {
   fetch("http://localhost:3000/usuario")
@@ -27,28 +26,31 @@ function listUsers() {
     .catch((error) => console.error("Erro:", error));
 }
 
-// submit (GET)
 userForm.addEventListener("submit", (e) => {
-  e.preventDefault(); //prevenção padrão de erros
-  //pegando os dados do formulário
+  e.preventDefault();
 
   const nome = document.getElementById("nome-cadastro").value;
   const email = document.getElementById("email-cadastro").value;
   const senha = document.getElementById("senha-cadastro").value;
-  const foto = ""
+  const foto = "";
 
   fetch("http://localhost:3000/usuario", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ nome: nome, email: email, senha: senha, foto:foto }),
+    body: JSON.stringify({
+      nome: nome,
+      email: email,
+      senha: senha,
+      foto: foto,
+    }),
   })
     .then((response) => response.json())
     .then(() => {
       listUsers();
       userForm.reset();
-      alert("cadastro feito com sucesso")
+      alert("cadastro feito com sucesso");
     })
     .catch((error) => console.error("Erro:", error));
 });
@@ -68,7 +70,7 @@ function deleteUser(id) {
 function updateUser(id) {
   const nome = document.getElementById("nome-lista").value;
   const email = document.getElementById("email-lista").value;
-  const crm = document.getElementById("crm-lista").value
+  const crm = document.getElementById("crm-lista").value;
   const senha = document.getElementById("senha-lista").value;
 
   if (nome.trim() === "" && email.trim() === "" && senha.trim()) {

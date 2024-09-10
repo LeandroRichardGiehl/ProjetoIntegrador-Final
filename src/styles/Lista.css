@@ -1,38 +1,40 @@
 .Menu {
-    list-style-type: none; /* Remover os pontos da lista */
-    margin-left: 90%;
+  list-style-type: none;
+  margin-left: 90%;
 }
 .Menu li {
-    display: inline-block;
-    margin-right: 10px; /* Espaçamento entre os botões */
+  display: inline-block;
+  margin-right: 10px;
 }
-.texto-Inicial{
-    margin-left: 55%;
-    margin-top: 13%;
+.texto-Inicial {
+  margin-left: 55%;
+  margin-top: 13%;
 }
-.botaoIsts{
-    margin-top: 10%;
-    margin-left: 15%;
+.botaoIsts {
+  margin-top: 10%;
+  margin-left: 15%;
 }
 
 h1 {
-    color: rgb(0, 0, 0);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
+  color: rgb(0, 0, 0);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
 }
 
-form, label, button{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    margin-top: 25px;
+form,
+label,
+button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-top: 25px;
 }
 
 .btn {
-    background-color: #ff4081;
-    border-color: #ff4081;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-left: 43%;
-    display: flex;
+  background-color: #ff4081;
+  border-color: #ff4081;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: 43%;
+  display: flex;
 }

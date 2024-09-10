@@ -1,7 +1,7 @@
-const headerButton = document.getElementById('voltar-home');
+const headerButton = document.getElementById("voltar-home");
 
-headerButton.addEventListener('click', () => {
-  window.location.href = 'index.html';
+headerButton.addEventListener("click", () => {
+  window.location.href = "index.html";
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,18 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("fotoPerfilInput").click();
     });
 
-    document.getElementById("fotoPerfilInput").addEventListener("change", (event) => {
-      const reader = new FileReader();
-      reader.onload = function () {
-        const novaFoto = reader.result;
-        fotoPerfil.src = novaFoto;
-        usuario.foto = novaFoto;
-        atualizarUsuarioAPI(usuario);
-      };
-      reader.readAsDataURL(event.target.files[0]);
-    });
+    document
+      .getElementById("fotoPerfilInput")
+      .addEventListener("change", (event) => {
+        const reader = new FileReader();
+        reader.onload = function () {
+          const novaFoto = reader.result;
+          fotoPerfil.src = novaFoto;
+          usuario.foto = novaFoto;
+          atualizarUsuarioAPI(usuario);
+        };
+        reader.readAsDataURL(event.target.files[0]);
+      });
 
-    // Verificação de debug para garantir que os botões estão sendo carregados
     console.log("Botões carregados corretamente.");
 
     const alterarModalBtn = document.getElementById("alterarDados");
@@ -53,20 +54,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const excluirContaBtn = document.getElementById("excluirConta");
     excluirContaBtn.addEventListener("click", () => {
       console.log("Botão 'Excluir Conta' clicado");
-      if (confirm("Tem certeza de que deseja excluir sua conta? Esta ação não pode ser desfeita.")) {
+      if (
+        confirm(
+          "Tem certeza de que deseja excluir sua conta? Esta ação não pode ser desfeita."
+        )
+      ) {
         fetch(`http://localhost:3000/usuario/${usuario.id}`, {
-          method: "DELETE"
+          method: "DELETE",
         })
-          .then(response => response.json())
-          .then(data => {
+          .then((response) => response.json())
+          .then((data) => {
             alert(data.mensagem);
             localStorage.removeItem("logado");
             localStorage.removeItem("usuario");
             window.location.href = "login.html";
           })
-          .catch(error => {
+          .catch((error) => {
             console.error("Erro ao excluir conta:", error);
-            alert("Ocorreu um erro ao excluir sua conta. Tente novamente mais tarde.");
+            alert(
+              "Ocorreu um erro ao excluir sua conta. Tente novamente mais tarde."
+            );
           });
       }
     });
@@ -86,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         email: novoEmail,
         senha: novaSenha,
         descricao: novaDescricao,
-        foto: usuario.foto // Manter a foto atual
+        foto: usuario.foto,
       };
 
       console.log("Dados de usuário atualizados:", usuarioAtualizado);
@@ -126,23 +133,24 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch(`http://localhost:3000/usuario/${usuario.id}`, {
         method: "PUT",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(usuario)
+        body: JSON.stringify(usuario),
       })
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
           alert(data.mensagem);
           localStorage.setItem("usuario", JSON.stringify(usuario));
-          window.location.reload(); // Atualiza a página para refletir as alterações
+          window.location.reload();
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Erro ao atualizar dados:", error);
-          alert("Ocorreu um erro ao atualizar os dados. Tente novamente mais tarde.");
+          alert(
+            "Ocorreu um erro ao atualizar os dados. Tente novamente mais tarde."
+          );
         });
     }
   }
-
 });
 
 document.getElementById("logout").addEventListener("click", () => {

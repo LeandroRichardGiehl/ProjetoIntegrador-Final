@@ -1,3 +1,18 @@
+const categories = {
+    "prevenção": [
+        "Como posso prevenir doenças sexualmente transmissíveis?",
+        "Quais são os métodos de proteção mais eficazes contra DSTs?"
+    ],
+    "tratamento": [
+        "Qual é o tratamento para gonorreia?",
+        "Como tratar clamídia de forma eficaz?"
+    ],
+    "causa": [
+        "O que causa a sífilis?",
+        "Como ocorre a transmissão do HIV?"
+    ]
+};
+
 const diseases = {
     "gonorreia": "Dor ao urinar, secreção amarela ou verde, dor abdominal.",
     "clamídia": "Dor ao urinar, secreção vaginal ou peniana anormal, dor abdominal.",
@@ -15,6 +30,8 @@ const responses = {
     "O que causa a sífilis?": "A sífilis é causada pela bactéria Treponema pallidum e é transmitida principalmente por contato sexual desprotegido.",
     "Como ocorre a transmissão do hiv?": "O HIV é transmitido através do contato com fluidos corporais infectados, como sangue, sêmen e fluidos vaginais. Pode ocorrer através de relações sexuais desprotegidas, compartilhamento de agulhas ou da mãe para o bebê durante a gravidez ou amamentação."
 };
+
+const fallbackResponse = "Desculpe, não entendi sua pergunta. Lembre-se, é sempre importante consultar um médico para orientações específicas sobre DSTs.";
 
 function saveChatState() {
     const chatBody = document.getElementById('chatbot-body');
@@ -74,6 +91,7 @@ function showCategoryOptions() {
         <button class="category-button" onclick="showCategoryQuestions('tratamento')">Tratamento</button>
         <button class="category-button" onclick="showCategoryQuestions('causa')">Causa</button>
         <button class="category-button" onclick="showDiseaseList()">Sintomas</button>
+        <button class="category-button" onclick="handleOptionClick('Se conectar com uma profissional')">Se conectar com uma profissional</button>
     `;
 
     if (!document.getElementById('chatbot-body').innerHTML.includes(categoriesHtml)) {

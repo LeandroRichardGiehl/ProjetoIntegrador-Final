@@ -23,14 +23,12 @@
   padding: 5rem 1rem;
 }
 
-
 .section__artigo {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
   justify-content: space-between;
 }
-
 
 .section__header {
   margin-bottom: 0.5rem;
@@ -75,7 +73,7 @@ header {
       rgba(69, 199, 80, 0.7),
       rgba(69, 199, 80, 0.7)
     ),
-    url('/imagens/estudos.jpg');
+    url("/imagens/estudos.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -163,7 +161,6 @@ header {
   color: var(--primary-color);
 }
 
-
 .service__header {
   display: flex;
   align-items: center;
@@ -194,9 +191,6 @@ header {
   background-color: var(--primary-color);
 }
 
-
-
-
 .about__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -215,15 +209,12 @@ header {
   border-radius: 10px;
 }
 
-
-
 .service__grid {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
 
 .service__card {
   padding: 2rem;
@@ -258,18 +249,12 @@ header {
   background-color: var(--primary-color);
 }
 
-
-
-.service__grid1{
+.service__grid1 {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
- 
-  
 }
-
-
 
 .service__card1 {
   padding: 2rem;
@@ -292,7 +277,7 @@ header {
 }
 
 .service__card1 a {
-  color: var(--primary-color); 
+  color: var(--primary-color);
 }
 
 .service__card1 a:hover {
@@ -304,18 +289,12 @@ header {
   background-color: var(--primary-color);
 }
 
-
-
-
-
 .service__grid2 {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  
 }
-
 
 .service__card2 {
   padding: 2rem;
@@ -331,7 +310,7 @@ header {
   font-weight: 600;
   color: var(--text-dark);
   float: left;
- 
+
   display: flex;
 }
 
@@ -341,7 +320,7 @@ header {
 }
 
 .service__card2 a {
-  color: var(--primary-color); 
+  color: var(--primary-color);
 }
 
 .service__card2 a:hover {
@@ -352,7 +331,6 @@ header {
   color: var(--primary-color-light);
   background-color: var(--primary-color);
 }
-
 
 .footer {
   background-color: var(--primary-color-light);
@@ -424,7 +402,3 @@ header {
   color: var(--white);
   cursor: pointer;
 }
-
-
-
-
